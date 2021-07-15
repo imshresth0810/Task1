@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTG</title>
+</head>
+<style>
+    body {
+        background-color: black;
+        /* font-family: 'mono', serif; */
+        font-family: 'Libre Baskerville', serif;
+    }
+    
+    .header {
+        overflow: hidden;
+        position: fixed;
+        /* font-family: 'Satisfy', cursive; */
+        font-size: 35px;
+        text-align: center;
+        width: 1480px;
+        /* border: 2px solid green; */
+        /* border-radius: 5px; */
+        color: white;
+        padding: 10px;
+        /* background-color: rgb(209, 49, 209); */
+    }
+    
+    .xyz {
+        margin: 50px;
+    }
+    
+    .first_div {
+        display: inline-block;
+        /* text-align: left; */
+        margin-left: 75px;
+        margin-top: 100px;
+        width: 40%;
+        /* border: 2px solid red;
+        border-radius: 5px; */
+    }
+    
+    .first_div .img {
+        float: left;
+    }
+    
+    .second_div {
+        /* display: inline-block; */
+        text-align: centre;
+        width: 90%;
+        margin-top: -101px;
+        margin-left: 420px;
+        padding: 50px;
+        /* border: 2px solid blue;
+        border-radius: 5px;
+        background-color: orangered; */
+        /* font-family: 'Satisfy', cursive; */
+        font-size: 30px;
+        color: #fcaf00;
+    }
+    
+    img {
+        width: 100%;
+        height: 100%;
+        /* filter: invert(100%); */
+    }
+    
+    .second_section {
+        color: black;
+    }
+    
+    .second_section .division h1 {
+        color: #fff700;
+        text-align: center;
+        font-size: 54px;
+        /* padding: 70px; */
+        margin-top: 103px;
+        /* border: 2px solid blue;
+        border-radius: 5px; */
+        font-family: 'monotype corsiva', serif;
+    }
+    
+    .second_section .division .division1 {
+        color: #a6a6a6;
+        font-size: 25px;
+        /* border: 2px solid blue;
+        border-radius: 5px; */
+        padding: 10px;
+        margin-top: 100px;
+        margin-bottom: 350px;
+    }
+    
+    .third_section {
+        color: black;
+    }
+    
+    .third_section h1 {
+        color: #d38b1f;
+        text-align: center;
+        font-size: 50px;
+        font-family: monospace;
+    }
+    
+    .third_section .counter {
+        flex: 1 1 48rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .third_section .counter .box {
+        width: 300px;
+        background: rgb(168 168 166);
+        text-align: center;
+        padding: 40px;
+        margin: 40px;
+    }
+    
+    .third_section .counter .box span {
+        font-size: 60px;
+        color: var(--yellow);
+    }
+    
+    .third_section .counter .box h3 {
+        font-size: 35px;
+        color: #fff;
+    }
+    
+    .fourth_section {
+        color: black;
+    }
+    
+    .fourth_section h1 {
+        text-align: center;
+        font-size: 35px;
+        color: rgb(55, 211, 138);
+        margin-top: 50px;
+        padding: 10px;
+    }
+    
+    .column1 {
+        flex: 20%;
+        padding: 5px;
+        /* border: 2px solid blue;
+        border-radius: 10px; */
+        width: 70%;
+        padding: 40px;
+        margin: 20px;
+    }
+    
+    .fourth_section .row .column1:hover img {
+        width: 100%;
+        height: 100%;
+        transform: scale(2);
+    }
+    
+    .fourth_section .row .column2:hover img {
+        width: 100%;
+        height: 100%;
+        transform: scale(2.2);
+    }
+    
+    .fourth_section .row .column3:hover img {
+        width: 100%;
+        height: 100%;
+        transform: scale(1.6);
+    }
+    
+    .fourth_section .row .column4:hover img {
+        width: 100%;
+        height: 100%;
+        transform: scale(2);
+    }
+    
+    .column2 {
+        flex: 20%;
+        padding: 5px;
+        /* border: 2px solid blue;
+        border-radius: 10px; */
+        width: 70%;
+        padding: 40px;
+        margin: 20px;
+    }
+    
+    .column3 {
+        flex: 20%;
+        padding: 5px;
+        /* border: 2px solid blue;
+        border-radius: 10px; */
+        width: 70%;
+        padding: 40px;
+        margin: 20px;
+    }
+    
+    .column4 {
+        flex: 20%;
+        padding: 5px;
+        /* border: 2px solid blue;
+        border-radius: 10px; */
+        width: 70%;
+        padding: 40px;
+        margin: 20px;
+    }
+    
+    .row {
+        display: flex;
+        width: 80%;
+        /* padding: 40px; */
+        /* margin: 50px; */
+    }
+    
+    .fifth_section .row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .fifth_section .row .content {
+        flex: 1 1 30rem;
+        padding: 4rem;
+        padding-bottom: 0;
+    }
+    
+    .fifth_section .row form {
+        flex: 1 1 45rem;
+        padding: 2rem;
+        margin: 2rem;
+        margin-bottom: 4rem;
+    }
+    
+    .fifth_section .row form .box {
+        padding: 1.5rem;
+        margin: 1rem 0;
+        background: #3333;
+        color: #fff;
+        text-transform: none;
+        font-size: 1.7rem;
+        width: 50%;
+    }
+    
+    .fifth_section .row form .box::placeholder {
+        text-transform: capitalize;
+    }
+    
+    .fifth_section .row form .message {
+        height: 5rem;
+        resize: none;
+    }
+    
+    .fifth_section .row .content .title {
+        text-transform: uppercase;
+        color: #cfc2c2;
+        font-size: 3rem;
+        padding-bottom: 2rem;
+    }
+    
+    .fifth_section .row .content .info h3 {
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+        color: rgb(128, 184, 96);
+        padding: 20px 0;
+        font-weight: normal;
+    }
+    /* .fifth_section .row .content .info h3 i {
+        padding-right: 1rem;
+        color: var(--yellow);
+    } */
+    
+    .fifth_section .row button {
+        display: block;
+        width: 59%;
+    }
+    
+    .content {
+        /* border: 2px solid blue;
+        border-radius: 5px; */
+        padding: 2px;
+        margin: 2px;
+        width: 20%;
+    }
+    
+    .form-group {
+        /* border: 2px solid blue;
+        border-radius: 5px; */
+        padding: 2px;
+        width: 60%;
+        margin-right: -280px;
+        margin-top: 90px;
+    }
+    
+    .img1 {
+        width: 86px;
+        height: 96px;
+        float: left;
+        filter: invert(100%);
+    }
+    
+    .abc {
+        /* border: 2px solid blue;
+        border-radius: 5px; */
+        width: 100%;
+        background-image: url("https://picserio.com/data/out/426/black-computer-wallpaper_6290414.jpg");
+        height: 500px;
+        margin-left: -50px;
+    }
+</style>
+
+<body>
+    <header class="header" id="home">
+
+        <nav>
+            <tr>
+                <td>
+                    <img src="https://scontent.fdel8-1.fna.fbcdn.net/v/t1.18169-9/484581_251800271580442_1145340754_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=inWT9g38RO8AX-0CAi6&tn=e1prCYn9PioEbaZq&_nc_ht=scontent.fdel8-1.fna&oh=d77d6f7dbe1d9bb823ca61906cdd59f1&oe=60F0C02F"
+                        alt="404" class="img1">
+                </td>
+                <td>
+                    <a class="xyz" href="home" style="text-decoration: none; color: #d5df9f;">
+                        Home</a>
+                </td>
+                <td>
+                    <a class="xyz" href="#about" style="text-decoration: none; color: #d5df9f;">
+                        About</a>
+                </td>
+                <td>
+                    <a class="xyz" href="#event" style="text-decoration: none; color: #d5df9f;">
+                        Event</a>
+                </td>
+                <td>
+                    <a class="xyz" href="#pics" style="text-decoration: none; color: #d5df9f;">
+                        Gallery</a>
+                </td>
+                <td>
+                    <a class="xyz" href="contact" style="text-decoration: none; color: #d5df9f;">
+                        Contact us</a>
+                </td>
+            </tr>
+        </nav>
+    </header>
+
+    <section class="first_section" style="padding: 100px;">
+        <div class="first_div" id="home">
+            <!-- <img src="https://scontent.fdel8-1.fna.fbcdn.net/v/t1.18169-9/484581_251800271580442_1145340754_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=inWT9g38RO8AX-0CAi6&tn=e1prCYn9PioEbaZq&_nc_ht=scontent.fdel8-1.fna&oh=d77d6f7dbe1d9bb823ca61906cdd59f1&oe=60F0C02F"
+                alt="404"> -->
+        </div>
+        <div class="abc">
+            <!-- <div>
+                <img src="http://cdn30.us1.fansshare.com/image/backgrounddesigns/bg-simple-1744032616.jpg" alt="" class="bg_img">
+            </div> -->
+            <div class="second_div">
+                <h1>IIT KHARAGPUR</h1>
+                <h1>Technology Transfer Group</h1>
+                <h1>TeDxIITKharagpur</h1>
+            </div>
+        </div>
+
+
+    </section>
+    <div id="about"></div>
+    <section class="second_section">
+        <div class="division">
+            <h1>What is Technology Transfer Group</h1>
+            <hr>
+            <div class="division1">Technology Transfer Group (TTG) is a students' initiative under the aegis of Sponsored Research & Industrial Consultancy (SRIC), IIT Kharagpur, which believes in the potential of the Institute as a premier Research & Development center. We
+                act as a link between the industry and the academia to facilitate the transfer of industry-ready technologies and to present IIT Kharagpur as a research consultant.</div>
+        </div>
+
+    </section>
+
+
+
+    <div id="event"></div>
+    <section class="third_section">
+
+        <h1>
+            Events hosted by TTG
+        </h1>
+        <hr>
+
+        <div class="counter">
+
+            <div class="box">
+                <span>2019</span>
+                <h3>TEDxIITKharagpur</h3>
+            </div>
+
+            <div class="box">
+                <span>Official Launch</span>
+                <h3>Undergraduate Research Portal(UG Portal</h3>
+            </div>
+
+            <div class="box">
+                <span>Launch Event</span>
+                <h3>Patent Drive - 2016</h3>
+            </div>
+
+        </div>
+    </section>
+
+    <div id="pics"></div>
+
+    <section class="fourth_section">
+        <h1>Some pics of the events</h1>
+        <hr>
+        <center>
+            <div class="row">
+                <div class="column1">
+                    <img src="https://scontent.fdel8-1.fna.fbcdn.net/v/t1.6435-9/72076093_2469835646443549_850617920785481728_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=cdbe9c&_nc_ohc=RCbeOJq6lN8AX_L2N5c&_nc_ht=scontent.fdel8-1.fna&oh=47f5b81afa04df0b14b0b989fd0494f1&oe=60F1576C"
+                        alt="404">
+                </div>
+                <div class="column2">
+                    <img src="https://scontent.fdel8-1.fna.fbcdn.net/v/t1.6435-9/54514902_2772956702730791_3054401052368437248_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=730e14&_nc_ohc=wDCWfqQVrN4AX-uHZ5J&_nc_oc=AQni8nTcHkqyjYMCNsihfGa3gNvJZ7gIVoYODsTqCN4ZoXY06lDQDYzpBRAB6TiaDFk&_nc_ht=scontent.fdel8-1.fna&oh=9390ed689ea0fa87e139a1cc41778be5&oe=60F094D0"
+                        alt="404">
+                </div>
+                <div class="column3"><img src="https://scontent.fdel8-1.fna.fbcdn.net/v/t31.18172-8/17016777_1687200031306469_4121407244500518320_o.jpg?_nc_cat=107&ccb=1-3&_nc_sid=9267fe&_nc_ohc=L_T8vMxzR74AX_2CGB6&tn=e1prCYn9PioEbaZq&_nc_ht=scontent.fdel8-1.fna&oh=6506cfbf9f77ddd018a57e44081b3ad3&oe=60F18372"
+                        alt="404">
+                </div>
+                <div class="column4">
+                    <img src="https://scontent.fdel8-1.fna.fbcdn.net/v/t31.18172-8/10658961_1084764464883365_4597151530753747157_o.jpg?_nc_cat=109&ccb=1-3&_nc_sid=730e14&_nc_ohc=nr-K3YB3ElkAX-N9jbj&_nc_ht=scontent.fdel8-1.fna&oh=b8bba529fbb19ccb6722d4a0d0351f90&oe=60F177C5"
+                        alt="404">
+                </div>
+            </div>
+        </center>
+
+    </section>
+
+
+    <hr>
+
+    <section class="fifth_section">
+
+        <div class="row">
+
+            <div class="content">
+
+                <h3 class="title">contact info</h3>
+
+                <div class="info" id="contact">
+
+                    <h3> IIT Kharagpur </h3>
+                    <h3> ttgiitkharagpur@gmail.com </h3>
+                    <h3> Facebook : Technology Transfer Group</h3>
+                    <h3> Instagram : Technology Transfer Group</h3>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <form action="">
+
+                    <input type="text" placeholder="Name" class="box">
+                    <input type="email" placeholder="email" class="box">
+                    <input type="text" placeholder="Subject " class="box">
+                    <textarea name="" id="" cols="30" rows="10" class="box message" placeholder="message"></textarea>
+                    <button type="submit" class="btn"> Send <a href="mailto:gaurav.shresth2000@gmail.com"></a> </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
